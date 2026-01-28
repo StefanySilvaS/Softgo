@@ -1,19 +1,32 @@
-import React, { useState } from "react";
-import Login from "./Login";
-import Listagem from "./Listagem";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
-  const [pagina, setPagina] = useState("login");
+// Importando páginas
+import Home from "./Home";
+import ListaVontades from "./ListaVontades";
+import ComoFunciona from "./ComoFunciona";
+import DetalhesLugar from "./DetalhesLugar";
+import ComoPreparar  from "./ComoPreparar";
+import DetalhesVontades from "./DetalhesVontades";
+import Historico from "./Historico";
 
-  const irParaListagem = () => setPagina("listagem");
-  const irParaLogin = () => setPagina("login");
 
+export default function App() {
   return (
-    <div>
-      {pagina === "login" && <Login onLogin={irParaListagem} />}
-      {pagina === "listagem" && <Listagem onLogout={irParaLogin} />}
-    </div>
+    <Router>
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+        <Route path="/lista-vontades" element={<ListaVontades />} />
+        <Route path="/como-funciona" element={<ComoFunciona />} />
+        <Route path="/historico" element={<Historico />} />
+<Route path="/como-preparar" element={<ComoPreparar />} />
+
+        <Route path="/detalhes-lugar" element={<DetalhesLugar />} />
+
+
+        <Route path="/detalhes-vontades/:categoria" element={<DetalhesVontades />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

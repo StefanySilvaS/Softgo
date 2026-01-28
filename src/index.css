@@ -1,13 +1,79 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  background: #f6fdf8;
+  color: #1f2933;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.home {
+  padding: 40px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.categories {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.category {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.category:hover {
+  transform: translateY(-2px);
+}
+
+.category span:first-child {
+  font-size: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.card .emoji {
+  font-size: 28px;
+}
+
+.card .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .date {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.card .status {
+  margin-left: auto;
+  font-size: 12px;
+  color: #16a34a;
+  font-weight: 600;
 }
