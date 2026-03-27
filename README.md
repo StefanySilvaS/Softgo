@@ -23,4 +23,4 @@ O projeto foi pensado com foco em experiência do usuário (UX), priorizando cla
 - HTML5
 - CSS3
 
-site - https://stefanysilvas.github.io/Softgo/
+
